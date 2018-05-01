@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
+// @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!** */
+@include mat-core();
+
+// Define an alternate dark theme.
+// $dark-primary: mat-palette($mat-blue-grey);
+// $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+// $dark-warn:    mat-palette($mat-deep-orange);
+// $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+// @include angular-material-theme($dark-theme);
+
+$mobile: "(max-width: 599px)";
+$tablet1: "(min-width: 600px) and (max-width: 829px)";
+$tablet2: "(min-width: 830px) and (max-width: 959px)";
+$desktop: "(min-width: 960px)";
+
+@media #{$mobile} {
+  .details_card {
+    margin: 0px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// html {
+//   -webkit-font-smoothing: antialiased;
+//   -ms-overflow-style: none;
+//   overflow: auto;
+// }
+
+
+html, body {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+
+  min-height: 100%;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+html, body, hot-app, hot-layout, mat-sidenav-container, mat-sidenav-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.hot-action-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hot-action-row > button {
+  margin: 16px;
+}
+
+.list-progress-spinner {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+.hot-toolbar-title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.snack-bar-error {
+  background: rgb(193, 30, 23) !important;
+}

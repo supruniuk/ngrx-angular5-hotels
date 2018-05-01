@@ -1,0 +1,21 @@
+<mat-nav-list disableRipple="true">
+
+  <mat-list-item *ngFor="let item of navListItems" 
+    [routerLink]="item.routerLink"
+    [queryParams]="item.queryParams"
+    [queryParamsHandling]="item.queryParamsHandling"
+    (click)="onItemClicked.emit()">
+    <mat-icon mat-list-icon>{{item.icon}}</mat-icon>
+    <h4 mat-line>{{item.title}}</h4>
+    <p mat-line class="secondary">{{item.hint}}</p>
+  </mat-list-item>
+
+  <mat-divider></mat-divider>
+
+  <mat-list-item (click)="onLogoutClicked.emit()">
+    <mat-icon mat-list-icon>power_settings_new</mat-icon>
+    <h4 mat-line>Sign out</h4>
+    <p mat-line class="secondary"></p>
+  </mat-list-item>
+
+</mat-nav-list>

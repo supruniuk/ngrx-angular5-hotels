@@ -1,0 +1,24 @@
+<div class="app-layout">
+  <mat-sidenav-container (backdropClick)="closeSidenav()">
+
+    <mat-sidenav [opened]="showSidenav$ | async">
+      <hot-user-profile [authData]="userData$ | async"></hot-user-profile>
+      <hot-customer-nav-list
+        (onItemClicked)="closeSidenav()"
+        (onLogoutClicked)="logout()">
+      </hot-customer-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="app-layout">
+      <!-- <div fxLayout="column" fxFlex class="app-layout"> -->
+        <hot-toolbar *ngIf="showToolbar$ | async" (openMenu)="openSidenav()">
+          {{ pageTitle$ | async }}
+        </hot-toolbar>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</div>

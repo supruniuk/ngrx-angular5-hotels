@@ -1,0 +1,17 @@
+<button mat-icon-button [matMenuTriggerFor]="hotelMenu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #hotelMenu="matMenu">
+  <button mat-menu-item (click)="onFavorite.emit()">
+    <mat-icon class="favorite-icon">{{isFavorite ? "star" : "star_border"}}</mat-icon>
+    <span>Favorite</span>
+  </button>
+  <button mat-menu-item (click)="onContact.emit()">
+    <mat-icon>chat</mat-icon>
+    <span>Contact</span>
+  </button>
+  <button mat-menu-item (click)="onBook.emit()">
+    <mat-icon>book</mat-icon>
+    <span>Book</span>
+  </button>
+</mat-menu>

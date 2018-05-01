@@ -1,0 +1,48 @@
+<div class="customer-booking">
+  <h3>
+    <b>{{ booking.user.name }}</b>
+  </h3>
+  <h4 class="mat-subheading-2">Stay from
+    <b>{{ booking.booking.start_date | date :'fullDate' }}</b> to
+    <b>{{ booking.booking.end_date | date :'fullDate' }}</b>
+  </h4>
+
+  <!-- NORMAL MODE -->
+  <section *ngIf="!editMode">
+    <hot-star-rating [rating]="booking.review?.rating" *ngIf="booking.review"></hot-star-rating>
+    <p class="review-text">{{ booking.review ? booking.review.text : null }}</p>
+    <div class="hot-action-row">
+      <div *ngIf="booking.review">
+        <button mat-icon-button disabled>
+          <mat-icon class="review-like-icon">{{ booking.review.is_liked ? "favorite" : "favorite_border" }}</mat-icon>
+        </button>
+        <label *ngIf="booking.review.likes_count > 0" class="mat-caption">{{ booking.review.likes_count }}</label>
+      </div>
+      <span class="spacer"></span>
+      <button mat-button [disabled]="!active" (click)="onEditBegin()">{{ booking.review ? "Edit review" : "Add review" }}</button>
+    </div>
+  </section>
+
+  <!-- EDIT MODE -->
+  <form [formGroup]="reviewEditForm" fxLayout="column" *ngIf="editMode" (ngSubmit)="onEditComplete()">
+
+    <hot-star-rating-form formControlName="rating" required></hot-star-rating-form>
+    <mat-error class="form-validation-error" *ngIf="showRatingValidationError()">
+      Please tell us how you liked it
+    </mat-error>
+
+    <mat-form-field class="review-text" [hideRequiredMarker]="true">
+      <textarea matInput required [placeholder]="booking.review ? 'Edit review text' : 'Add review text'" formControlName="text"
+        matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="10">
+      </textarea>
+      <mat-error *ngIf="formControls.text.hasError('required')">
+        Please leave some thoughts about your experience with the hotel
+      </mat-error>
+    </mat-form-field>
+
+    <section class="hot-action-row">
+      <button type="button" mat-button (click)="onCancelEdit.emit()">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </section>
+  </form>
+</div>

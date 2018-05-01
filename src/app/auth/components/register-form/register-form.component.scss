@@ -1,0 +1,24 @@
+// :host {
+//   display: flex;
+//   justify-content: center;
+//   // flex-direction: row;
+//   // height: 100%;
+//   // margin: 72px 0;
+// }
+
+.register-form {
+  min-width: 300px;
+}
+
+.register-error {
+  padding: 16px;
+  color: white;
+  background-color: red;
+}
+
+.register-action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

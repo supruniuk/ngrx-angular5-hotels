@@ -1,0 +1,24 @@
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <section class="mat-typography hotel-search-form">
+      <mat-form-field>
+        <input type="text" matInput placeholder="Name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select type="number" placeholder="Minimal rating" formControlName="rating">
+          <mat-option *ngFor="let item of [1,2,3,4,5]" [value]="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-checkbox matInput type="checkbox" formControlName="favorites">Show favorites only</mat-checkbox>
+      <button type="button" mat-button (click)="reset()">Reset</button>
+    </section>
+    <mat-divider></mat-divider>
+
+    <div class="hot-action-row">
+      <button type="button" mat-button (click)="onCancel.emit()">Cancel</button>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary" type="submit">Search</button>
+    </div>
+
+  </form>

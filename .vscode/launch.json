@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Jest tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "stopOnEntry": false,
+      "args": ["auth-interceptor", "--runInBand", "--no-cache"],
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": null,
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+          "--nolazy"
+      ],
+      "env": {
+          "NODE_ENV": "development"
+      },
+      "console": "internalConsole",
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceRoot}/dist/out-tsc/*"   
+      ]
+    },
+    {
+      "name": "Django",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": true,
+      "pythonPath": "${config:python.pythonPath}",
+      "program": "${workspaceRoot}/manage.py",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "runserver",
+        "--noreload",
+        "--nothreading"
+      ],
+      "env": {},
+      "envFile": "${workspaceRoot}/.env",
+      "debugOptions": [
+        "WaitOnAbnormalExit",
+        "WaitOnNormalExit",
+        "RedirectOutput",
+        "DjangoDebugging"
+      ]
+    }
+  ],
+  "compounds": []
+}

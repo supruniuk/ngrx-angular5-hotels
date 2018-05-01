@@ -1,0 +1,24 @@
+.login-form {
+  width: 300px;
+}
+
+.login-error {
+  padding: 16px;
+  color: white;
+  background-color: red;
+}
+
+.login-action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fake-link {
+  color: darkblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+

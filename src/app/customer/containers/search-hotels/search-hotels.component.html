@@ -1,0 +1,12 @@
+<hot-secondary-toolbar 
+  title="Search Hotels" 
+  [showBackButton]="isMobileLayout$ | async"
+  (onGoBack)="navigateBack()">
+</hot-secondary-toolbar>
+
+<hot-hotels-filter 
+  [filter]="filter$ | async" 
+  (onSubmit)="search($event)" 
+  (onCancel)="cancelSearch()">
+</hot-hotels-filter>  
+

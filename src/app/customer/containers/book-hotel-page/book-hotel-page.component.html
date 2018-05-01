@@ -1,0 +1,7 @@
+<hot-secondary-toolbar 
+  [title]="(hotel$ | async) .name" 
+  [showBackButton]="isMobileLayout$ | async"
+  (onGoBack)="navigateBack()">
+</hot-secondary-toolbar>
+
+<hot-booking-form (onSubmit)="bookHotel($event)" (onCancel)="navigateBack()"></hot-booking-form>

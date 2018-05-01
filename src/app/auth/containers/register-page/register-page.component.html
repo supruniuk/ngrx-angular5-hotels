@@ -1,0 +1,10 @@
+<mat-drawer-container>
+  <div fxLayout="row" fxLayoutAlign="center center" class="register-container">
+    <hot-register-form
+      (onSubmit)="onSubmit($event)"
+      (onCancel)="onCancel()"
+      [pending]="pending$ | async"
+      [errorMessage]="error$ | async">
+    </hot-register-form>
+  </div>
+</mat-drawer-container>

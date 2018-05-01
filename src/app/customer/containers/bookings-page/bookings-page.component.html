@@ -1,0 +1,17 @@
+<div class="mat-typography" fxFlex fxFlex.gt-sm="50%">
+
+  <div *ngIf="loading$ | async" class="list-progress-spinner">
+    <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
+  </div>
+
+  <div class="bookings-list" *ngFor="let b of (bookings$ | async); let last = last">
+    <hot-customer-booking [booking]="b" 
+      [editMode]="(editBookingId$ | async) == b.booking.id"
+      [active]="!(editBookingId$ | async)"    
+      (onStartEdit)="startEditBooking($event)"
+      (onCancelEdit)="cancelEditBooking()"
+      (onEdit)="editBooking($event)">
+    </hot-customer-booking>
+    <mat-divider *ngIf="!last"></mat-divider>
+  </div>
+</div>

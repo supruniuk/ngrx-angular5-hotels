@@ -1,0 +1,36 @@
+// .review-action-row {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-end;
+//   align-items: center;
+// }
+
+// .review-action-row > * {
+//   margin: 16px 4px;
+// }
+
+:host {
+  height: 100%;
+  overflow: auto;
+}
+
+.customer-booking {
+  padding:16px;
+}
+
+.review-like-icon {
+  color: #f44336;
+}
+
+.review-text {
+  margin-top: 16px;
+  // width: -webkit-fill-available;
+}
+
+.form-validation-error {
+  display: block;
+  color: #f44336;
+  font-size: 75%;
+  opacity: 1;
+  transform: translateY(0%);
+}

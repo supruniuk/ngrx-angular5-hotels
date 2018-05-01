@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page should compile 1`] = `
+<hot-login-page
+  error$={[Function Store]}
+  pending$={[Function Store]}
+  store={[Function Store]}
+>
+  <hot-login-form
+    ng-reflect-pending="false"
+  >
+    <mat-card
+      class="mat-card"
+    >
+      
+    
+      <mat-card-title
+        class="mat-card-title"
+      >
+        Login
+      </mat-card-title>
+      
+    
+      <mat-card-content
+        class="mat-card-content"
+      >
+        
+      
+        <form
+          class="ng-untouched ng-pristine ng-invalid"
+          name="loginForm"
+          ng-reflect-form="[object Object]"
+          novalidate=""
+        >
+          
+        
+          <p>
+            
+          
+            <mat-form-field
+              class="mat-input-container mat-form-field ng-tns-c1-0 ng-untouched ng-pristine ng-invalid"
+            >
+              <div
+                class="mat-input-wrapper mat-form-field-wrapper"
+              >
+                <div
+                  class="mat-input-flex mat-form-field-flex"
+                >
+                  
+                  <div
+                    class="mat-input-infix mat-form-field-infix"
+                  >
+                    
+            
+                    <input
+                      aria-invalid="false"
+                      class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="email"
+                      id="mat-input-0"
+                      matInput=""
+                      ng-reflect-name="email"
+                      ng-reflect-placeholder="Email"
+                      ng-reflect-required=""
+                      ng-reflect-type="text"
+                      placeholder="Email"
+                      required=""
+                      type="text"
+                    />
+                    
+          
+                    <span
+                      class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+                    >
+                      
+                      <label
+                        aria-owns="mat-input-0"
+                        class="mat-input-placeholder mat-form-field-placeholder ng-tns-c1-0 mat-empty mat-form-field-empty mat-float mat-form-field-float"
+                        for="mat-input-0"
+                      >
+                        Email 
+                        
+                        <span
+                          aria-hidden="true"
+                          class="mat-placeholder-required mat-form-field-required-marker ng-tns-c1-0"
+                        >
+                          *
+                        </span>
+                      </label>
+                    </span>
+                  </div>
+                  
+                </div>
+                <div
+                  class="mat-input-underline mat-form-field-underline"
+                >
+                  <span
+                    class="mat-input-ripple mat-form-field-ripple"
+                  />
+                </div>
+                <div
+                  class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+                  ng-reflect-ng-switch="hint"
+                >
+                  
+                  
+                  <div
+                    class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c1-0 ng-trigger ng-trigger-transitionMessages"
+                    style="opacity: 1;"
+                  >
+                    
+                    <div
+                      class="mat-input-hint-spacer mat-form-field-hint-spacer"
+                    />
+                  </div>
+                </div>
+              </div>
+            </mat-form-field>
+            
+        
+          </p>
+          
+  
+        
+          <p>
+            
+          
+            <mat-form-field
+              class="mat-input-container mat-form-field ng-tns-c1-1 ng-untouched ng-pristine ng-invalid"
+            >
+              <div
+                class="mat-input-wrapper mat-form-field-wrapper"
+              >
+                <div
+                  class="mat-input-flex mat-form-field-flex"
+                >
+                  
+                  <div
+                    class="mat-input-infix mat-form-field-infix"
+                  >
+                    
+            
+                    <input
+                      aria-invalid="false"
+                      class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-invalid"
+                      formcontrolname="password"
+                      id="mat-input-1"
+                      matInput=""
+                      ng-reflect-name="password"
+                      ng-reflect-placeholder="Password"
+                      ng-reflect-required=""
+                      ng-reflect-type="password"
+                      placeholder="Password"
+                      required=""
+                      type="password"
+                    />
+                    
+          
+                    <span
+                      class="mat-input-placeholder-wrapper mat-form-field-placeholder-wrapper"
+                    >
+                      
+                      <label
+                        aria-owns="mat-input-1"
+                        class="mat-input-placeholder mat-form-field-placeholder ng-tns-c1-1 mat-empty mat-form-field-empty mat-float mat-form-field-float"
+                        for="mat-input-1"
+                      >
+                        Password 
+                        
+                        <span
+                          aria-hidden="true"
+                          class="mat-placeholder-required mat-form-field-required-marker ng-tns-c1-1"
+                        >
+                          *
+                        </span>
+                      </label>
+                    </span>
+                  </div>
+                  
+                </div>
+                <div
+                  class="mat-input-underline mat-form-field-underline"
+                >
+                  <span
+                    class="mat-input-ripple mat-form-field-ripple"
+                  />
+                </div>
+                <div
+                  class="mat-input-subscript-wrapper mat-form-field-subscript-wrapper"
+                  ng-reflect-ng-switch="hint"
+                >
+                  
+                  
+                  <div
+                    class="mat-input-hint-wrapper mat-form-field-hint-wrapper ng-tns-c1-1 ng-trigger ng-trigger-transitionMessages"
+                    style="opacity: 1;"
+                  >
+                    
+                    <div
+                      class="mat-input-hint-spacer mat-form-field-hint-spacer"
+                    />
+                  </div>
+                </div>
+              </div>
+            </mat-form-field>
+            
+        
+          </p>
+          
+  
+        
+          
+                    
+      
+        
+          <p
+            class="loginButtons"
+          >
+            
+          
+            <button
+              mat-button=""
+              type="submit"
+            >
+              Login
+            </button>
+            
+          
+            <span
+              class="mat-caption fake-link"
+            >
+              
+            Click here if you want to create new account.
+          
+            </span>
+             
+        
+          </p>
+          
+  
+      
+        </form>
+        
+    
+      </mat-card-content>
+      
+  
+    </mat-card>
+  </hot-login-form>
+</hot-login-page>
+`;

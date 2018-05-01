@@ -1,0 +1,47 @@
+<form [formGroup]="bookingForm" (ngSubmit)="submit()">
+
+  <section class="mat-typography booking-form">
+    <p></p>
+    <h4>Please choose start and end date of the reservation:</h4>
+
+    <p>
+      <mat-form-field [hideRequiredMarker]="true">
+        <input matInput required [min]="minDate" [matDatepicker]="fromPicker" placeholder="start date" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+        <mat-datepicker #fromPicker></mat-datepicker>
+        <mat-error *ngIf="bookingForm.controls.startDate.hasError('required')">
+          Please enter a valid start date
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field [hideRequiredMarker]="true">
+        <input matInput required [min]="minDate" [matDatepicker]="toPicker" placeholder="end date" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+        <mat-datepicker #toPicker></mat-datepicker>
+        <mat-error *ngIf="bookingForm.controls.startDate.hasError('required')">
+          Please enter a valid end date
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <mat-select type="number" placeholder="Number of bedrooms" formControlName="bedrooms">
+          <mat-option *ngFor="let item of [1,2,3]" [value]="item">{{item}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+  </section>
+
+  <!-- <mat-divider></mat-divider> -->
+
+  <div class="hot-action-row">
+    <button type="button" mat-button (click)="onCancel.emit()">Cancel</button>
+    <!-- <span class="spacer"></span> -->
+    <button mat-raised-button color="primary" type="submit">Book</button>
+  </div>
+
+</form>

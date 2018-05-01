@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthReducer LOGIN_SUCCESS should add a user set loggedIn to true in auth state 1`] = `
+Object {
+  "auth": null,
+  "loggedIn": true,
+  "user": Object {
+    "email": "test_email",
+    "groups": Array [
+      Object {
+        "id": 1,
+        "name": "test_group",
+      },
+    ],
+    "name": "test_user",
+  },
+}
+`;
+
+exports[`AuthReducer LOGOUT should logout a user 1`] = `
+Object {
+  "auth": null,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`AuthReducer undefined action should return the default state 1`] = `
+Object {
+  "auth": null,
+  "loggedIn": false,
+  "user": null,
+}
+`;
+
+exports[`AuthReducer wrong login payload should NOT authenticate a user 1`] = `
+Object {
+  "auth": null,
+  "loggedIn": false,
+  "user": null,
+}
+`;

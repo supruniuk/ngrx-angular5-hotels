@@ -1,0 +1,8 @@
+<img src="{{ hotel.img }}" class="hotel-media">
+  <mat-list>
+    <mat-list-item *ngFor="let prop of properties">
+      <mat-icon matListIcon>{{ prop.icon }}</mat-icon>
+      <h3 matLine> {{ prop.value }} </h3>
+      <p matLine>{{ prop.title }}</p>
+    </mat-list-item>
+  </mat-list>

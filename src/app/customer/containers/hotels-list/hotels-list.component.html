@@ -1,0 +1,54 @@
+<!-- <div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="loadMore()"
+  [scrollWindow]="false"
+  [infiniteScrollContainer]="'.infinite-scroll'"
+  [fromRoot]="true">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let hotel of hotels$ | async; trackBy: trackById" (click)="openHotelDetails(hotel.id)">
+      <img mat-list-avatar src="{{hotel.img}}?w=360" alt="Image of {{hotel.name}}">
+      <img mat-list-avatar src="{{hotel.img}}" style="display: none;" alt="Image of {{hotel.name}}">
+      <h4 mat-line>{{ hotel.name }}</h4>
+      <p mat-line> {{ hotel.location }} </p>
+      <p mat-line >
+        <span class="hotel-star-rating">
+          <hot-star-rating [rating]="hotel.avg_rating" [small]="true"></hot-star-rating>
+          <span > {{ hotel.avg_rating | number : '1.1-1' }} </span>
+        </span>
+      </p>
+    </mat-list-item>
+
+    <div *ngIf="loading$ | async" class="list-progress-spinner">
+      <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
+    </div>    
+  </mat-nav-list>
+</div> -->
+<!-- <mat-nav-list> -->
+
+
+
+<virtual-scroll #scroll
+  [items]="(hotels$ | async)"
+  (update)="scroll.viewPortItems = $event"
+  (change)="scrollEvent($event)"
+  [childHeight]="88"
+  [bufferAmount]="2"
+  class="mat-nav-list">
+    <mat-list-item *ngFor="let hotel of scroll.viewPortItems; trackBy: trackById" (click)="openHotelDetails(hotel.id)">
+      <img mat-list-avatar src="{{hotel.img}}?w=360" alt="Image of {{hotel.name}}">
+      <img mat-list-avatar src="{{hotel.img}}" style="display: none;" alt="Image of {{hotel.name}}">
+      <h4 mat-line>{{ hotel.name }}</h4>
+      <p mat-line> {{ hotel.location }} </p>
+      <p mat-line >
+        <span class="hotel-star-rating">
+          <hot-star-rating [rating]="hotel.avg_rating" [small]="true"></hot-star-rating>
+          <span > {{ hotel.avg_rating | number : '1.1-1' }} </span>
+        </span>
+      </p>
+    </mat-list-item>
+    <div *ngIf="loading$ | async" class="list-progress-spinner">
+      <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
+    </div>  
+</virtual-scroll>

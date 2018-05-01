@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page should compile 1`] = `
+<hot-login-form
+  form={[Function FormGroup]}
+  onRegister={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Login
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        name="loginForm"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+                  
+      
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+          
+          <span
+            class="mat-caption fake-link"
+          >
+            
+            Click here if you want to create new account.
+          
+          </span>
+           
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+</hot-login-form>
+`;
+
+exports[`Login Page should disable the form if pending 1`] = `
+<hot-login-form
+  form={[Function FormGroup]}
+  onRegister={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Login
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine"
+        name="loginForm"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine"
+              disabled=""
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine"
+              disabled=""
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+                  
+      
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+          
+          <span
+            class="mat-caption fake-link"
+          >
+            
+            Click here if you want to create new account.
+          
+          </span>
+           
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+</hot-login-form>
+`;
+
+exports[`Login Page should display an error message if provided 1`] = `
+<hot-login-form
+  errorMessage={[Function String]}
+  form={[Function FormGroup]}
+  onRegister={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Login
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        name="loginForm"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+        <p
+          class="loginError"
+        >
+          
+          Invalid credentials
+        
+        </p>
+                  
+      
+        
+        <p
+          class="loginButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="submit"
+          >
+            Login
+          </button>
+          
+          
+          <span
+            class="mat-caption fake-link"
+          >
+            
+            Click here if you want to create new account.
+          
+          </span>
+           
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+</hot-login-form>
+`;

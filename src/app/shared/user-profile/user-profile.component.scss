@@ -1,0 +1,54 @@
+// .side-nav .user-view {
+//   position: relative;
+//   padding: 32px 32px 0;
+//   margin-bottom: 8px;
+// }
+
+// .side-nav .user-view .circle, 
+// .side-nav .user-view .name, 
+// .side-nav .user-view .email
+// {
+//   display: block;
+// }
+
+// .side-nav .user-view .circle {
+//   height: 64px;
+//   width: 64px;
+// }
+
+// .side-nav .user-view .name,
+// .side-nav .user-view .email {
+//   font-size: 14px;
+//   line-height: 24px;
+// }
+
+// .side-nav .user-view .name {
+//   margin-top: 16px;
+//   font-weight: 500;
+// }
+
+// .side-nav .user-view .email {
+//   padding-bottom: 16px;
+//   font-weight: 400;
+// }
+
+// .white-text {
+//   color: #FFFFFF !important;
+// }
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+// .user-profile > * {
+//   margin: 16px;
+// }
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 16px;
+}

@@ -1,0 +1,24 @@
+
+
+<mat-drawer-container >
+  <div fxLayout="row" fxLayoutAlign="center center" class="login-container">
+    <hot-login-form
+      (onSubmit)="onSubmit($event)"
+      (onRegister)="onRegister('customer')"
+      [pending]="pending$ | async"
+      [errorMessage]="error$ | async">
+    </hot-login-form>
+  </div>
+</mat-drawer-container>
+
+
+
+
+<!-- <div fxLayout="row" fxLayoutAlign="center center" class="login-container">
+  <hot-login-form
+    (onSubmit)="onSubmit($event)"
+    (onRegister)="onRegister('customer')"
+    [pending]="pending$ | async"
+    [errorMessage]="error$ | async">
+  </hot-login-form>
+</div> -->

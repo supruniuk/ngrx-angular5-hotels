@@ -1,0 +1,9 @@
+<div class="star-rating" *ngIf="!editMode">
+  <mat-icon *ngFor="let item of [1,2,3,4,5]" [ngClass]="{ 'small-stars': small}">{{rating >= item ? "star" : "star_border"}}</mat-icon>
+</div>
+
+<div class="star-rating" *ngIf="editMode">
+  <button type="button" *ngFor="let item of [1,2,3,4,5]" mat-icon-button (click)="updateRating.emit(item)">
+    <mat-icon>{{rating >= item ? "star" : "star_border"}}</mat-icon>
+  </button>
+</div>

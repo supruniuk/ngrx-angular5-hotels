@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegisterPageReducer REGISTER should make pending to true 1`] = `
+Object {
+  "error": null,
+  "pending": true,
+}
+`;
+
+exports[`RegisterPageReducer REGISTER_FAILURE should have an error and no pending state 1`] = `
+Object {
+  "error": "register failed",
+  "pending": false,
+}
+`;
+
+exports[`RegisterPageReducer REGISTER_SUCCESS should have no error and no pending state 1`] = `
+Object {
+  "error": null,
+  "pending": false,
+}
+`;
+
+exports[`RegisterPageReducer undefined action should return the default state 1`] = `
+Object {
+  "error": null,
+  "pending": false,
+}
+`;

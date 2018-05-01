@@ -1,0 +1,11 @@
+<div fxLayout="column" fxFlex.gt-md="30%" class="mat-typography customer-master" fxFlex [hidden]="!(showMaster$ | async)">
+  <hot-hotels-list class="infinite-scroll"></hot-hotels-list>
+  <hot-not-found-page *ngIf="(hotelsNotFound$ | async)" class="placeholder"></hot-not-found-page>
+</div>
+
+<div class="hotel-card mat-typography mat-elevation-z2" fxLayout="column" fxFlex.gt-md="40%" fxFlex [hidden]="!(showDetails$ | async)">
+  <!-- <div *ngIf="hotelsMasterActive$ | async" class="placeholder mat-subheading-2">
+    Please select hotel from the list to see its detailed info.
+  </div> -->
+  <router-outlet></router-outlet>
+</div>

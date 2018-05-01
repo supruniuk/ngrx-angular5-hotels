@@ -1,0 +1,450 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Page should compile 1`] = `
+<hot-register-form
+  form={[Function FormGroup]}
+  onCancel={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Register
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="name"
+              matInput=""
+              ng-reflect-name="name"
+              ng-reflect-required=""
+              placeholder="Name"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+                  
+      
+        
+        <p
+          class="registerButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="button"
+          >
+            Cancel
+          </button>
+           
+          
+          <button
+            color="primary"
+            mat-raised-button=""
+            type="submit"
+          >
+            Create account
+          </button>
+            
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+  
+  
+  
+  
+  
+  
+</hot-register-form>
+`;
+
+exports[`Register Page should disable the form if pending 1`] = `
+<hot-register-form
+  form={[Function FormGroup]}
+  onCancel={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Register
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine"
+              disabled=""
+              formcontrolname="name"
+              matInput=""
+              ng-reflect-name="name"
+              ng-reflect-required=""
+              placeholder="Name"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine"
+              disabled=""
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine"
+              disabled=""
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+                  
+      
+        
+        <p
+          class="registerButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="button"
+          >
+            Cancel
+          </button>
+           
+          
+          <button
+            color="primary"
+            mat-raised-button=""
+            type="submit"
+          >
+            Create account
+          </button>
+            
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+  
+  
+  
+  
+  
+  
+</hot-register-form>
+`;
+
+exports[`Register Page should display an error message if provided 1`] = `
+<hot-register-form
+  errorMessage={[Function String]}
+  form={[Function FormGroup]}
+  onCancel={[Function EventEmitter]}
+  onSubmit={[Function EventEmitter]}
+>
+  <mat-card>
+    
+    
+    <mat-card-title>
+      Register
+    </mat-card-title>
+    
+    
+    <mat-card-content>
+      
+      
+      <form
+        class="ng-untouched ng-pristine ng-invalid"
+        ng-reflect-form="[object Object]"
+        novalidate=""
+      >
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="name"
+              matInput=""
+              ng-reflect-name="name"
+              ng-reflect-required=""
+              placeholder="Name"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="email"
+              matInput=""
+              ng-reflect-name="email"
+              ng-reflect-required=""
+              placeholder="Email"
+              required=""
+              type="text"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        <p>
+          
+          
+          <mat-form-field>
+            
+            
+            <input
+              class="ng-untouched ng-pristine ng-invalid"
+              formcontrolname="password"
+              matInput=""
+              ng-reflect-name="password"
+              ng-reflect-required=""
+              placeholder="Password"
+              required=""
+              type="password"
+            />
+            
+          
+          </mat-form-field>
+          
+        
+        </p>
+        
+  
+        
+        
+        <p
+          class="registerError"
+        >
+          
+          Invalid credentials
+        
+        </p>
+                  
+      
+        
+        <p
+          class="registerButtons"
+        >
+          
+          
+          <button
+            mat-button=""
+            type="button"
+          >
+            Cancel
+          </button>
+           
+          
+          <button
+            color="primary"
+            mat-raised-button=""
+            type="submit"
+          >
+            Create account
+          </button>
+            
+        
+        </p>
+        
+  
+      
+      </form>
+      
+    
+    </mat-card-content>
+    
+  
+  </mat-card>
+  
+  
+  
+  
+  
+  
+</hot-register-form>
+`;

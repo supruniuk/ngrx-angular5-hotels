@@ -1,0 +1,15 @@
+<mat-list-item *ngFor="let r of reviews; let last = last">
+  <div class="hotel-review">
+    <h3><b>{{ r.user.name }}</b></h3>
+    <hot-star-rating [rating]="r.review.rating"></hot-star-rating>
+    <h4>{{ r.review.created_on | date :'fullDate' }}</h4>
+    <p class="hotel-review-text">{{ r.review.text }}</p>
+    <div class="hot-action-row">
+      <button mat-icon-button (click)="onLikeReview.emit(r.review)">
+        <mat-icon class="review-like-icon">{{ r.review.is_liked > 0 ? "favorite" : "favorite_border" }}</mat-icon>
+      </button>
+      <label class="md-caption">{{r.review.likes_count}}</label>
+    </div>
+  </div>
+  <mat-divider *ngIf="!last"></mat-divider>
+</mat-list-item>
