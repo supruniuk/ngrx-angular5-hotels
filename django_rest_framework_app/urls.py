@@ -1,6 +1,7 @@
 """web_service URL Configuration
 """
 from django.conf import settings
+from django.contrib import admin
 from rest_framework_jwt.views import (
     obtain_jwt_token, refresh_jwt_token, verify_jwt_token)
 from rest_framework.routers import DefaultRouter
@@ -14,11 +15,10 @@ router.register(prefix='review', viewset=ReviewViewSet)
 router.register(prefix='stay', viewset=StayViewSet, base_name='stay-list')
 
 urlpatterns = [
+    url(r'^admin/', admin.site.urls),
     url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^token-refresh/', refresh_jwt_token),
     url(r'^token-verify/', verify_jwt_token),
-    # url(r'^auth-customers/$', CustomerAuth.as_view()),
-    # url(r'^auth-hotels/$', HotelAuth.as_view()),
     url(r'^auth/$', Auth.as_view()),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='Hotels API'))

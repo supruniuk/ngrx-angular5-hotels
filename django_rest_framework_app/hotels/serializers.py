@@ -41,8 +41,10 @@ class ReviewDetailSerializer(serializers.ModelSerializer):
 
 class ReviewSerializer(serializers.ModelSerializer):
     """ Serializer to represent the Review model """
-    likes_count = serializers.SerializerMethodField('_likes_count', read_only=True)
-    is_liked = serializers.SerializerMethodField('_is_liked', read_only=True)
+    likes_count = serializers.SerializerMethodField(
+        '_likes_count', read_only=True)
+    is_liked = serializers.SerializerMethodField(
+        '_is_liked', read_only=True)
 
     def _is_liked(self, obj):
         user = self.context['request'].user
@@ -90,7 +92,8 @@ class StaySerializer(serializers.ModelSerializer):
 
 class HotelDetailsSerializer(serializers.ModelSerializer):
     """ Serializer to represent the Hotel model """
-    reviews = ReviewDetailSerializer(source='review_set', many=True, read_only=True)
+    reviews = ReviewDetailSerializer(
+        source='review_set', many=True, read_only=True)
     is_favorite = serializers.BooleanField(read_only=True)
 
     class Meta:
@@ -108,4 +111,3 @@ class HotelSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "img", "avg_rating", "location",
                   "rates", "phone", "availability", "website",
                   "email")
-

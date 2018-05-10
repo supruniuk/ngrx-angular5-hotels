@@ -32,6 +32,8 @@
 npm-debug.log
 testem.log
 /typings
+.coverage
+htmlcov/
 
 # e2e
 /e2e/*.js
@@ -40,5 +42,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+*.pyc
 
 django_rest_framework_app/env
+django_rest_framework_app/hotels/migrations

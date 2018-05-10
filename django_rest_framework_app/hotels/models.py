@@ -21,6 +21,7 @@ class BaseManager(BaseUserManager, InheritanceManager):
             name=kwargs.get('name'),
         )
         user.set_password(password)
+        user.is_stuff = False
         user.save()
         return user
 
@@ -43,7 +44,11 @@ class BaseUser(AbstractBaseUser):
     email = models.CharField(max_length=255, unique=True)
     img = models.ImageField(upload_to=user_directory_path,
                             max_length=254, blank=True)
+    is_staff = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)
+
     groups = models.ManyToManyField(Group)
+
     objects = BaseManager()
 
     USERNAME_FIELD = 'email'
