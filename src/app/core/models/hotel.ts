@@ -5,7 +5,7 @@ export class Hotel {
   email: string;
   img: string;
   is_favorite: boolean;
-  location: string;
+  address: string;
   name: string;
   phone: string;
   rates: string;

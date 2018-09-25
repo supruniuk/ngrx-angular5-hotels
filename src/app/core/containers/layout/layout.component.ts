@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { combineLatest } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Store } from '@ngrx/store';
 
@@ -20,7 +21,7 @@ import {
   getQueryParams
 } from '../../store/selectors';
 import { getUser } from '../../../auth/store/selectors';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 
 @Component({
   selector: 'hot-layout',
@@ -60,7 +61,7 @@ export class LayoutComponent implements OnDestroy {
       }
     });
 
-    this.onRouteChanged = Observable.combineLatest(
+    this.onRouteChanged = combineLatest(
       this.currentUrl$,
       this.queryParams$
     )

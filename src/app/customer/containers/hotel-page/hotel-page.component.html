@@ -3,7 +3,8 @@
   [showBackButton]="isMobileLayout$ | async"
   (onGoBack)="navigateBack()">
   <hot-hotel-menu [isFavorite]="(hotel$ | async) .is_favorite" (onFavorite)="favoriteHotel()" (onContact)="contactHotel()"
-    (onBook)="bookHotel()"></hot-hotel-menu>
+    (onBook)="bookHotel()">
+  </hot-hotel-menu>
 </hot-secondary-toolbar>
 
 <mat-tab-group class="hotel-tab-group" (animationDone)="onTabOpened()" [(selectedIndex)]="currentTabIndex">
@@ -16,8 +17,6 @@
   </mat-tab>
 
   <mat-tab label="Location">
-    <!-- <hot-hotel-location *ngIf="mapIsActive" [isActive]="mapIsActive" [location]="(hotel$ | async).name"></hot-hotel-location> -->
-    <!-- <hot-hotel-location *ngIf="mapIsActive" [location]="(hotel$ | async).name"></hot-hotel-location> -->
     <hot-hotel-location [location]="selectedHotelLocation$ | async"></hot-hotel-location>
   </mat-tab>
 </mat-tab-group>

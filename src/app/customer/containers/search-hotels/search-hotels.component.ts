@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { CustomerState } from '../../store/reducers';
 import { getSearchParams } from '../../store/selectors';
-import { SearchParams } from '../../models';
+import { SearchParams } from '@app/core/models/search';
 import { getMobileLayout } from '../../../core/store/selectors';
 import * as fromRouter from '../../../core/store/actions/router.actions';
 

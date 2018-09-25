@@ -88,13 +88,15 @@ export class AuthEffects {
     .pipe(
       ofType(AuthActionTypes.register),
       map((action: Register) => action.payload),
-      switchMap(signup =>
-        this.authService.register(signup)
+      switchMap(signup => {
+        return this.authService.register(signup)
           .pipe(
             map(user => new RegisterSuccess(user)),
-            catchError(error => of(new RegisterFail(error)))
-          )
-      )
+            catchError(error => {
+              return of(new RegisterFail(JSON.stringify(error.error)));
+            }),
+          );
+      }),
     );
 
   @Effect()
@@ -110,7 +112,7 @@ export class AuthEffects {
         return ('Server isn\'t reachable. Please check internet connection.');
       }
       case 400: {
-        return ('Unable to log in with provided credentials.');
+        return (`Unable to log in with provided credentials. ${JSON.stringify(error.error)}`);
       }
       default: {
         return `Server error: ${error.status}, message: ${error.message}`;

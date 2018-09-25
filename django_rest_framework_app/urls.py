@@ -7,19 +7,20 @@ from rest_framework_jwt.views import (
 from rest_framework.routers import DefaultRouter
 from rest_framework.documentation import include_docs_urls
 from django.conf.urls import url, include
-from hotels.views import (HotelViewSet, ReviewViewSet, StayViewSet, Auth)
+from hotels.views import (HotelViewSet, ReviewViewSet,
+                          StayViewSet, UserViewSet)
 
 router = DefaultRouter()
 router.register(prefix='hotel', viewset=HotelViewSet, base_name='hotel-list')
 router.register(prefix='review', viewset=ReviewViewSet)
 router.register(prefix='stay', viewset=StayViewSet, base_name='stay-list')
+router.register(prefix='auth', viewset=UserViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^token-refresh/', refresh_jwt_token),
     url(r'^token-verify/', verify_jwt_token),
-    url(r'^auth/$', Auth.as_view()),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='Hotels API'))
 ]

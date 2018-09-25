@@ -8,7 +8,7 @@ import { HotelsService } from '../../core/services/hotels.service';
 import { PreloadHotel, PreloadHotelFail } from '../../core/store-entities/actions';
 import { CustomerState } from '../store/reducers';
 import { getHotelEntities, getHotelsLoaded } from '../../core/store-entities/selectors';
-import { SearchParams } from '../models';
+import { SearchParams } from '@app/core/models/search';
 
 
 @Injectable()

@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { Hotel } from '../../models';
+import { Hotel } from '@app/core/models/hotel';
 
 @Component({
   selector: 'hot-hotel-info',
@@ -19,7 +19,7 @@ export class HotelInfoComponent implements OnChanges {
       { title: 'Email', name: 'email', icon: 'mail', value: undefined },
       { title: 'Phone', name: 'phone', icon: 'phone', value: undefined },
       { title: 'Website', name: 'website', icon: 'web', value: undefined },
-      { title: 'Location', name: 'location', icon: 'location_city', value: undefined },
+      { title: 'Address', name: 'address', icon: 'location_city', value: undefined },
     ];
   }
 

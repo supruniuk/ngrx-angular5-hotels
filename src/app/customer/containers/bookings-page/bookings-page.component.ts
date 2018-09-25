@@ -14,8 +14,8 @@ import {
   EditReview,
   CreateReview,
 } from '../../../core/store-entities/actions';
-import { Booking, Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { Booking, Review } from '@app/core/models/booking';
+import { User } from '@app/core/models/user';
 
 
 @Component({

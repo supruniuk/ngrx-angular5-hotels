@@ -34,6 +34,11 @@ ALLOWED_HOSTS = [
 
 # Application definition
 
+# AUTHENTICATION_BACKENDS = ( 
+#     'django.contrib.auth.backends.ModelBackend', 
+# )
+
+
 INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admin',
@@ -47,18 +52,25 @@ INSTALLED_APPS = [
     'hotels',
     'filters',
 ]
+
+# For some reason if to uncomment this we will have to replicate 
+# all intermidaiate User models with theie Managers and methods
+# However this declaration works fine:
+
+
 AUTH_USER_MODEL = 'hotels.BaseUser'
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
     'hotels.views.jwt_response_payload_handler',
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=600),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=6000),
 }
 
 # ROLE_GROUPS = ['customers', 'hotels']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -67,9 +79,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.DjangoModelPermissions',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
@@ -112,7 +126,7 @@ WSGI_APPLICATION = 'wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hotels',
+        'NAME': 'test_drf_user',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': 'localhost',

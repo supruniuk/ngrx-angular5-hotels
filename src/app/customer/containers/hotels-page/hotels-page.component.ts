@@ -13,7 +13,7 @@ import {
   getShowMaster,
   getShowDetails,
 } from "@app/core/store/selectors";
-import { SearchParams } from '../../models';
+import { SearchParams } from '@app/core/models/search';
 
 
 @Component({

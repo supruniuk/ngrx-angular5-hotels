@@ -22,7 +22,7 @@ export const getSelectedHotelReviews = createSelector(
   getUserEntities,
   getSelectedHotel,
   (reviews, users, selectedHotel) => {
-    return selectedHotel && selectedHotel.reviews
+    return selectedHotel.reviews && selectedHotel.reviews
       .map(reviewId => reviews[reviewId])
       .map(review => {
         const user = users[review.customer];

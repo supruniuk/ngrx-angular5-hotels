@@ -1,35 +1,11 @@
-from __future__ import unicode_literals
+# from __future__ import unicode_literals
+# from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Group
-from model_utils.managers import InheritanceManager
+from django.contrib.auth.models import AbstractUser
+
+# from django.contrib.auth.models import PermissionsMixin
 from django.db.models import Avg
-
-
-class BaseManager(BaseUserManager, InheritanceManager):
-
-    def create_user(self, email, password=None, **kwargs):
-        # Ensure that an email address is set
-        if not email:
-            raise ValueError('Users must have a valid e-mail address')
-
-        # Ensure that a username is set
-        if not kwargs.get('name'):
-            raise ValueError('Users must have a valid name')
-
-        user = self.model(
-            email=self.normalize_email(email),
-            name=kwargs.get('name'),
-        )
-        user.set_password(password)
-        user.is_stuff = False
-        user.save()
-        return user
-
-    def create_superuser(self, email, password=None, **kwargs):
-        user = self.create_user(email, password, **kwargs)
-        user.is_admin = True
-        user.save()
-        return user
+# from django.contrib.auth import get_user_model
 
 
 def user_directory_path(instance, filename):
@@ -39,26 +15,18 @@ def user_directory_path(instance, filename):
         return 'images/hotels/user_{0}/{1}'.format(instance.id, filename)
 
 
-class BaseUser(AbstractBaseUser):
-    name = models.CharField(max_length=255, unique=True)
-    email = models.CharField(max_length=255, unique=True)
+class BaseUser(AbstractUser):
     img = models.ImageField(upload_to=user_directory_path,
-                            max_length=254, blank=True)
-    is_staff = models.BooleanField(default=False)
-    is_superuser = models.BooleanField(default=False)
+                            max_length=254,
+                            default="/images/default/profile_img.jpg")
 
-    groups = models.ManyToManyField(Group)
-
-    objects = BaseManager()
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['name']
+    email = models.CharField(max_length=255, unique=True)
+    REQUIRED_FIELDS = ['email']
 
 
 class Customer(BaseUser):
-    favorites = models.ManyToManyField(
-        BaseUser, related_name='customer_favorites')
-    objects = BaseManager()
+    favorites = models.ManyToManyField('Hotel',
+                                       related_name='customer_favorites')
 
     class Meta:
         db_table = 'customer'
@@ -81,27 +49,28 @@ class Review(models.Model):
     rating = models.FloatField(blank=True, null=True)
     created_on = models.DateField(auto_now_add=True)
     stay = models.OneToOneField(Stay, models.DO_NOTHING)
-    customer = models.ForeignKey(Customer, models.DO_NOTHING)
-    hotel = models.ForeignKey('Hotel', models.DO_NOTHING)
+    customer = models.ForeignKey(Customer, models.DO_NOTHING,
+                                 related_name='reviewer_customer')
+    hotel = models.ForeignKey('Hotel', models.DO_NOTHING,
+                              related_name='reviewed_hotel')
 
     class Meta:
         db_table = 'review'
 
 
 class Hotel(BaseUser):
-    location = models.CharField(max_length=255, blank=True)
-    rates = models.CharField(max_length=255, blank=True)
+    name = models.CharField(max_length=255, blank=False)
+    address = models.CharField(max_length=255, blank=True)
+    rate = models.CharField(max_length=255, blank=True)
     phone = models.CharField(max_length=16, blank=True)
-    availability = models.CharField(max_length=20, blank=True)
-    website = models.CharField(max_length=100, blank=True)
-
+    availability = models.DateField(auto_now_add=True)
+    website = models.URLField()
     avg_rating = models.FloatField(default=0)
-    objects = BaseManager()
 
     class Meta:
         db_table = 'hotel'
 
     def update_avg_rating(self):
-        self.avg_rating = self.review_set.aggregate(
+        self.avg_rating = self.reviewed_hotel.aggregate(
             Avg('rating'))['rating__avg']
         self.save()

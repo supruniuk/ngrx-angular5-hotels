@@ -6,5 +6,7 @@
 export const environment = {
   production: false,
   serverUrl: 'http://127.0.0.1:8000',
-  googleApiKei: 'AIzaSyBxEAk4ITFWvHFnW0pZIpr7ppdjx_5ICnY',
+  // googleApiKei: 'AIzaSyBxEAk4ITFWvHFnW0pZIpr7ppdjx_5ICnY',
+  googleApiKei: 'AIzaSyBMI24gq4PLvP_ABeqK2tNPN_7vCn3huCg',
+
 };

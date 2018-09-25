@@ -6,7 +6,7 @@ import { Store, select } from '@ngrx/store';
 import { StartHotelsNewSearch } from '../../core/store-entities/actions';
 import { CustomerState } from '../store/reducers';
 import { getHotelsLoaded } from '../../core/store-entities/selectors';
-import { SearchParams } from '../models';
+import { SearchParams } from '@app/core/models/search';
 import { filter, switchMap, map, take, tap, catchError } from 'rxjs/operators';
 
 @Injectable()

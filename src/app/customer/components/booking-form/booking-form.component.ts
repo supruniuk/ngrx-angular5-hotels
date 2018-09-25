@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { BookingForm } from '../../models';
+import { BookingForm } from '@app/core/models/booking';
 
 
 @Component({

@@ -5,6 +5,7 @@ export class Group {
 
 export interface User {
   id: string;
+  username: string;
   name: string;
   email: string;
   img: string;

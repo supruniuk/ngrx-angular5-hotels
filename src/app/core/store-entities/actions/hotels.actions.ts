@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
 import { Hotel, Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 
 
 export enum HotelActionTypes {

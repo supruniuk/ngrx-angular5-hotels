@@ -4,7 +4,8 @@ import { of } from 'rxjs/observable/of';
 // import 'rxjs/add/operator/catch';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user';
+import { User } from '@app/core/models/user';
+
 import {
   Authenticate,
   SignUp,
@@ -36,7 +37,8 @@ export class AuthService {
     return this.http.post<AuthResponse>(url, signup)
     .pipe(
       map(response => {
-        return { user: response.user, auth: this.getAuth(response) };
+        let responseAuth = this.getAuth(response);
+        return { user: response.user, auth: responseAuth };
       })
     );
   }

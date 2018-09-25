@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  // serverUrl: 'http://192.168.1.8:8000',
-  serverUrl: 'http://127.0.0.1:8000',
-  googleApiKei: 'AIzaSyBxEAk4ITFWvHFnW0pZIpr7ppdjx_5ICnY',
+  serverUrl: 'http://www.vitsup.net/hotels_service',
+  // googleApiKei: 'AIzaSyBxEAk4ITFWvHFnW0pZIpr7ppdjx_5ICnY',
+  googleApiKei: 'AIzaSyBMI24gq4PLvP_ABeqK2tNPN_7vCn3huCg',
 };

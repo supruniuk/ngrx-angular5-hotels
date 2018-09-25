@@ -75,6 +75,26 @@
       ]
     },
     {
+      "name": "Django_import_data",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "pythonPath": "${config:python.pythonPath}",
+      "program": "${workspaceRoot}/manage.py",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "import_data"
+      ],
+      "env": {},
+      "envFile": "${workspaceRoot}/.env",
+      "debugOptions": [
+        "WaitOnAbnormalExit",
+        "WaitOnNormalExit",
+        "RedirectOutput",
+        "DjangoDebugging"
+      ]
+    },    
+    {
       "name": "Python: Flask (0.11.x or later)",
       "type": "python",
       "request": "launch",

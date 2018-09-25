@@ -1,6 +1,5 @@
-// import { SearchActionTypes, SearchActions } from '../actions';
 import { HotelsActions, HotelActionTypes } from '@app/core/store-entities/actions';
-import { SearchParams } from '../../models';
+import { SearchParams } from '@app/core/models/search';
 
 export interface SearchState {
   name: string;

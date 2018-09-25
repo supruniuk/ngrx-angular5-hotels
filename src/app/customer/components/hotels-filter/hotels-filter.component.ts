@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { SearchParams } from '../../models';
+import { SearchParams } from '@app/core/models/search';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({

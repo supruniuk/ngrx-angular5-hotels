@@ -15,7 +15,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 import { AuthInterceptor, AuthService, AuthGuard, RoleGuard } from './services';
-import { AuthEffects, reducers, metaReducers } from './store';
+import { AuthEffects, reducers, sessionStorage } from './store';
 
 
 export const COMPONENTS = [
@@ -62,7 +62,7 @@ export class AuthModule {
   imports: [
     AuthModule,
     RouterModule.forChild(ROUTES),
-    StoreModule.forFeature('auth', reducers, { metaReducers }),
+    StoreModule.forFeature('auth', reducers, { metaReducers: [sessionStorage] }),
     EffectsModule.forFeature([AuthEffects]),
   ],
 })

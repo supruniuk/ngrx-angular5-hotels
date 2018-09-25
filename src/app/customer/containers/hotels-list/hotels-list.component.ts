@@ -7,7 +7,9 @@ import { of } from 'rxjs/observable/of';
 
 import { take, filter, switchMap, tap, withLatestFrom, map } from "rxjs/operators";
 import { Store } from "@ngrx/store";
-import { Hotel, SearchParams } from "../../models";
+import { SearchParams } from '@app/core/models/search';
+import { Hotel } from '@app/core/models/hotel';
+
 import { CustomerState } from "../../store/reducers";
 import { SearchHotels } from "../../../core/store-entities/actions";
 import { getAllHotels, getHotelsLoading, getTotalHotels } from "../../../core/store-entities/selectors";

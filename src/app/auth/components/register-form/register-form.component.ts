@@ -25,7 +25,7 @@ export class RegisterFormComponent {
 
   form: FormGroup = new FormGroup({
     authType: new FormControl(''),
-    name: new FormControl(''),
+    username: new FormControl(''),
     email: new FormControl(''),
     password: new FormControl(''),
   });

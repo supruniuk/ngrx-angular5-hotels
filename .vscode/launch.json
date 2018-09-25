@@ -27,7 +27,7 @@
       "name": "Django",
       "type": "python",
       "request": "launch",
-      "stopOnEntry": true,
+      "stopOnEntry": false,
       "pythonPath": "${config:python.pythonPath}",
       "program": "${workspaceRoot}/manage.py",
       "cwd": "${workspaceRoot}",
@@ -44,7 +44,21 @@
         "RedirectOutput",
         "DjangoDebugging"
       ]
-    }
+    },  
+    {
+      "name": "Python",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "pythonPath": "${config:python.pythonPath}",
+      "program": "${file}",
+      "cwd": "${workspaceRoot}",
+      "debugOptions": [
+          "WaitOnAbnormalExit",
+          "WaitOnNormalExit",
+          "RedirectOutput"
+      ]
+  },       
   ],
   "compounds": []
 }

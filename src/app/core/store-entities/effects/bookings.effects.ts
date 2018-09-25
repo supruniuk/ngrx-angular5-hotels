@@ -6,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { map, switchMap, catchError } from 'rxjs/operators';
 import { BookingService } from '../../services/booking.service';
 import { Booking, Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 
 import {
   BookingActionTypes,

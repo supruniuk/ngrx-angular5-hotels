@@ -6,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 import { map, filter, switchMap, catchError, tap } from 'rxjs/operators';
 import { HotelsService, NotificationService, GeocodingService } from '../../services';
 import { Hotel, Review} from '../../models';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 import {
   HotelActionTypes,
   StartHotelsNewSearch,

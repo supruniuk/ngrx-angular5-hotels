@@ -87,23 +87,23 @@ from shutil import copyfile, copytree
 #     json.dump(read_data, w_f, indent=4)
 
 
-# fixtures_path = os.path.join(os.path.dirname(__file__), '..', '..')
-# read_path = os.path.join(fixtures_path, 'hotelsdata_write.json')
+fixtures_path = os.path.join(os.path.dirname(__file__), '..', '..')
+read_path = os.path.join(fixtures_path, 'hotelsdata_write.json')
 
-# modif_path = os.path.join(fixtures_path, 'hotelsdata.json')
+modif_path = os.path.join(fixtures_path, 'hotelsdata.json')
 
-# with open(read_path, 'r') as r_f:
-#     read_data = json.load(r_f)
+with open(read_path, 'r') as r_f:
+    read_data = json.load(r_f)
 
-#     with open(modif_path, 'r') as m_f:
-#         mod_data = json.load(m_f)
+    with open(modif_path, 'r') as m_f:
+        mod_data = json.load(m_f)
 
-#         for record in read_data:
-#             if record['model'] == 'hotels.hotel' or record['model'] == 'hotels.customer':
-#                 img = record['fields']['img']
-#                 for rec in mod_data:
-#                     if rec['model'] == "hotels.baseuser" and rec['pk'] == record['pk']:
-#                         rec['fields']['img'] = img
+        for record in read_data:
+            if record['model'] == 'hotels.hotel' or record['model'] == 'hotels.customer':
+                img = record['fields']['img']
+                for rec in mod_data:
+                    if rec['model'] == "hotels.baseuser" and rec['pk'] == record['pk']:
+                        rec['fields']['img'] = img
 
 
 write_path = os.path.join(fixtures_path, 'hotelsdata_write2.json')

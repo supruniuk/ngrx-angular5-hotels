@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
-import { User } from '../../auth/models/user';
+import { User } from '@app/core/models/user';
 
 @Component({
   selector: 'hot-user-profile',

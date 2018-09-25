@@ -1,6 +1,6 @@
 <mat-list-item *ngFor="let r of reviews; let last = last">
   <div class="hotel-review">
-    <h3><b>{{ r.user.name }}</b></h3>
+    <h3><b>{{ r.user.first_name + ' ' +  r.user.last_name}}</b></h3>
     <hot-star-rating [rating]="r.review.rating"></hot-star-rating>
     <h4>{{ r.review.created_on | date :'fullDate' }}</h4>
     <p class="hotel-review-text">{{ r.review.text }}</p>

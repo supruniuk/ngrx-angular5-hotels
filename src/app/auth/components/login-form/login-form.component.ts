@@ -25,7 +25,7 @@ export class LoginFormComponent {
 
 
   form: FormGroup = new FormGroup({
-    email: new FormControl(''),
+    username: new FormControl(''),
     password: new FormControl(''),
   });
 

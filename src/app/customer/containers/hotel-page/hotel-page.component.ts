@@ -17,8 +17,9 @@ import {
   GeocodeSelectedLocation
 } from "@app/core/store-entities/actions";
 import * as fromRouter from "@app/core/store/actions/router.actions";
-import { Hotel, Review } from "../../models";
-import { User } from "@app/auth/models/user";
+import { User } from '@app/core/models/user';
+import { Review } from '@app/core/models/booking';
+import { Hotel } from '@app/core/models/hotel';
 
 
 import {HotelLocationComponent} from '../../components/hotel-location/hotel-location.component';
@@ -36,12 +37,14 @@ export class HotelPageComponent implements OnDestroy {
   hotel$: Observable<Hotel>;
   reviews$: Observable<{ review: Review; user: User }[]>;
   isMobileLayout$: Observable<boolean>;
+  selectedHotelId$: Observable<string>
   onSelectedHotelChanged: Subscription;
   currentTabIndex: number;
   selectedHotelLocation$: Observable<{lat: number, lng: number}>;
 
   constructor(private store: Store<CustomerState>) {
     this.hotel$ = store.select(getSelectedHotel);
+    this.selectedHotelId$ = store.select(getSelectedHotelId);
     this.reviews$ = store.select(getSelectedHotelReviews);
     this.isMobileLayout$ = store.select(getMobileLayout);
     this.selectedHotelLocation$ = store.select(getSelectedHotelLocation);

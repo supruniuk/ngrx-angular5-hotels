@@ -3,13 +3,10 @@ import { HttpClient, HttpParams, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { map, last } from 'rxjs/operators';
 import { environment } from '@env/environment';
-import {
-  Hotel,
-  SearchParams,
-  Booking,
-  Review
-} from '../../customer/models';
-import { User } from '../../auth/models/user';
+import { Booking, Review } from '@app/core/models/booking';
+import { Hotel } from '@app/core/models/hotel';
+import { User } from '@app/core/models/user';
+import { SearchParams } from '@app/core/models/search';
 
 
 @Injectable()

@@ -1,6 +1,6 @@
 import { createSelector } from '@ngrx/store';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 import {
   HotelActionTypes,
   HotelsActions,

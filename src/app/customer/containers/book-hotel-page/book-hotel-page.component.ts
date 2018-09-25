@@ -5,12 +5,13 @@ import 'rxjs/add/observable/combineLatest';
 import { take } from 'rxjs/operators';
 import { CustomerState } from '../../store/reducers';
 import { getUser } from '../../../auth/store/selectors';
-import { User } from '../../../auth/models/user';
+import { User } from '@app/core/models/user';
 import * as fromRouter from '../../../core/store/actions/router.actions';
 import { getMobileLayout } from '../../../core/store/selectors';
 import { getSelectedHotel } from '../../../core/store-entities/selectors';
 import { BookHotel } from '../../../core/store-entities/actions';
-import { BookingForm, Booking, Hotel } from '../../models';
+import { Booking, Review, BookingForm } from '@app/core/models/booking';
+import { Hotel } from '@app/core/models/hotel';
 
 
 

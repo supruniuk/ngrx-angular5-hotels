@@ -1,4 +1,4 @@
-import { User } from './user';
+import { User } from '@app/core/models/user';
 
 
 export interface Authenticate {
@@ -25,11 +25,3 @@ export class Auth {
     public type: string
   ) { }
 }
-
-// export class CustomerAuth extends Auth {
-//   readonly type = CUSTOMER_TYPE;
-// }
-
-// export class HotelAuth extends Auth {
-//   readonly type = HOTEL_TYPE;
-// }

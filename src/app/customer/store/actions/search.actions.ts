@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { SearchParams } from '../../models';
+import { SearchParams } from '@app/core/models/search';
 
 
 export enum SearchActionTypes {

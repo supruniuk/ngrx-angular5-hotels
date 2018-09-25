@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Booking, Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { Booking, Review } from '@app/core/models/booking';
+import { User } from '@app/core/models/user';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

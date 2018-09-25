@@ -6,8 +6,9 @@ import { of } from 'rxjs/observable/of';
 import { map, switchMap, tap, catchError } from 'rxjs/operators';
 import { BookingService } from '@app/core/services';
 import { ShowNotificationInfo, ShowNotificationError } from '@app/core/store';
-import { Booking, Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { Booking, Review } from '@app/core/models/booking';
+import { Hotel } from '@app/core/models/hotel';
+import { User } from '@app/core/models/user';
 import * as fromRouter from '../../../core/store/actions/router.actions';
 import {
   BookingActionTypes,

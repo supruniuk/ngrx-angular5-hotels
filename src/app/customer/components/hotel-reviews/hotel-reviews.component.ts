@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { Review } from '../../models';
-import { User } from '../../../auth/models/user';
+import { Review } from '@app/core/models/booking';
+import { User } from '@app/core/models/user';
 
 
 @Component({

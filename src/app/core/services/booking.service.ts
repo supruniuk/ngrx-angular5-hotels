@@ -4,8 +4,9 @@ import { Observable } from 'rxjs/Observable';
 
 import { map, filter } from 'rxjs/operators';
 import { environment } from '@env/environment';
-import { Hotel, Booking, Review } from '../../customer/models';
-import { User } from '../../auth/models/user';
+import { Booking, Review } from '@app/core/models/booking';
+import { Hotel } from '@app/core/models/hotel';
+import { User } from '@app/core/models/user';
 
 
 @Injectable()
